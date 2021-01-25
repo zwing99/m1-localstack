@@ -1,0 +1,48 @@
+#! /bin/bash
+while [ "$status" != "running" ]
+do
+status=$(curl http://localstack:4566/health?reload 2>/dev/null | jq -r '.services.dynamodb')
+if [ "$status" != "running" ]; then
+    echo "still booting dynamodb"
+    echo "$status"
+fi
+sleep 1
+done
+
+status=""
+while [ "$status" != "running" ]
+do
+status=$(curl http://localstack:4566/health?reload 2>/dev/null | jq -r '.services.es')
+if [ "$status" != "running" ]; then
+    echo "still booting es"
+    echo "$status"
+fi
+sleep 1
+done
+
+
+# dynamo example
+echo "creating dd table"
+aws dynamodb create-table --cli-input-json file:///inputs-custom.json --endpoint-url=http://localstack:4566
+echo "waiting for dd table"
+aws dynamodb wait table-exists --table-name inputs-custom --endpoint-url=http://localstack:4566
+echo "dd table exists"
+
+# es example
+aws es create-elasticsearch-domain --endpoint-url=http://localstack:4566 --domain-name elasticsearch-1 --elasticsearch-version 7.1
+
+es_status=255
+es_created="false"
+while [ "$es_status" -ne 0 ] || [ "$es_created" != "true" ]
+do
+es_created=$(aws es describe-elasticsearch-domain --endpoint-url=http://localstack:4566 --domain-name elasticsearch-1 | jq -r '.DomainStatus.Created')
+es_status=$?
+sleep 1
+if [ "$es_status" -ne 0 ] || [ "$es_created" != "true" ]; then
+    echo "still creating es"
+    echo "$es_status"
+    echo "$es_created"
+else
+    echo "$es_created"
+fi
+done

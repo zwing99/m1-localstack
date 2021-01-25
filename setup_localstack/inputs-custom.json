@@ -1,0 +1,49 @@
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "data_type",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "id",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "company_id",
+            "AttributeType": "S"
+        }
+    ],
+    "TableName": "inputs-custom",
+    "KeySchema": [
+        {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 10,
+        "WriteCapacityUnits": 10
+    },
+    "GlobalSecondaryIndexes": [
+        {
+            "IndexName": "operation_id_index",
+            "KeySchema": [
+                {
+                    "AttributeName": "company_id",
+                    "KeyType": "HASH"
+                },
+                {
+                    "AttributeName": "data_type",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 10,
+                "WriteCapacityUnits": 10
+            }
+        }
+    ]
+}

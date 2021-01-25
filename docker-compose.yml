@@ -1,0 +1,30 @@
+# Local Debugging docker compose file
+version: '3.5'
+
+services:
+    localstack:
+        image: localstack/localstack-full:0.12.4
+        ports:
+            - 4566:4566
+        environment:
+            - SERVICES=dynamodb,es
+            - DOCKER_HOST=unix:///var/run/docker.sock
+            - DEFAULT_REGION=us-east-1
+            - DEBUG=1
+        volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock"
+        networks: [cool_docker_stuff]
+    setup-localstack:
+        build:
+            context: setup_localstack
+            dockerfile: Dockerfile
+        environment:
+            - AWS_ACCESS_KEY_ID=dummyaccess
+            - AWS_SECRET_ACCESS_KEY=dummysecret
+            - AWS_DEFAULT_REGION=us-east-1
+        networks: [cool_docker_stuff]
+        command: ["/setup-localstack"]
+        depends_on:
+            - localstack
+networks:
+    cool_docker_stuff: {}
