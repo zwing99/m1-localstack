@@ -1,203 +1,215 @@
 Attaching to m1-localstack_setup-localstack_1, m1-localstack_localstack_1
 localstack_1        | Waiting for all LocalStack services to be ready
-localstack_1        | 2021-01-25 17:13:56,943 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-localstack_1        | 2021-01-25 17:13:56,947 INFO supervisord started with pid 14
-localstack_1        | 2021-01-25 17:13:57,950 INFO spawned: 'dashboard' with pid 20
-localstack_1        | 2021-01-25 17:13:57,953 INFO spawned: 'infra' with pid 21
-localstack_1        | 2021-01-25 17:13:57,961 INFO success: dashboard entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+localstack_1        | 2021-01-26 22:09:43,457 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+localstack_1        | 2021-01-26 22:09:43,460 INFO supervisord started with pid 14
+localstack_1        | 2021-01-26 22:09:44,464 INFO spawned: 'dashboard' with pid 20
+localstack_1        | 2021-01-26 22:09:44,467 INFO spawned: 'infra' with pid 21
 localstack_1        | (. .venv/bin/activate; bin/localstack web)
+localstack_1        | 2021-01-26 22:09:44,472 INFO success: dashboard entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
 localstack_1        | (. .venv/bin/activate; exec bin/localstack start --host)
-localstack_1        | 2021-01-25 17:13:58,963 INFO success: infra entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-localstack_1        | LocalStack version: 0.12.5
+localstack_1        | 2021-01-26T22:09:45:DEBUG:bootstrap.py: Loading plugins - scope "commands", module "localstack_ext": <function register_localstack_commands at 0x7f5e5af4ac10>
+localstack_1        | LocalStack version: 0.11.4
+localstack_1        | 2021-01-26T22:09:45:DEBUG:bootstrap.py: Loading plugins - scope "services", module "localstack_ext": <function register_localstack_plugins at 0x7f5e5bb6d3a0>
+localstack_1        | 2021-01-26T22:09:45:DEBUG:bootstrap.py: Loading plugins - scope "services", module "localstack": <function register_localstack_plugins at 0x7f5e5bb6d0d0>
+localstack_1        | LocalStack version: 0.11.4
 localstack_1        | Starting local dev environment. CTRL-C to quit.
-localstack_1        | LocalStack version: 0.12.5
-localstack_1        | 2021-01-25T17:14:02:DEBUG:bootstrap.py: Loading plugins - scope "services", module "localstack": <function register_localstack_plugins at 0x7fcad2cb6820>
-localstack_1        | [2021-01-25 17:14:02 +0000] [24] [INFO] Running on https://0.0.0.0:8081 (CTRL + C to quit)
-localstack_1        | 2021-01-25T17:14:02:INFO:hypercorn.error: Running on https://0.0.0.0:8081 (CTRL + C to quit)
+localstack_1        | !WARNING! - Looks like you have configured $LAMBDA_REMOTE_DOCKER=1 - please make sure to configure $HOST_TMP_FOLDER to point to your host's $TMPDIR
+localstack_1        | 2021-01-26T22:09:45:DEBUG:bootstrap.py: Loading plugins - scope "commands", module "localstack_ext": <function register_localstack_commands at 0x7f8211039c10>
+localstack_1        | 2021-01-26T22:09:45:DEBUG:bootstrap.py: Loading plugins - scope "services", module "localstack_ext": <function register_localstack_plugins at 0x7f8211c5d3a0>
+localstack_1        | 2021-01-26T22:09:45:DEBUG:bootstrap.py: Loading plugins - scope "services", module "localstack": <function register_localstack_plugins at 0x7f8211c5d0d0>
+localstack_1        | 2021-01-26 22:09:46,276 INFO success: infra entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+localstack_1        | Running on 0.0.0.0:8081 over https (CTRL + C to quit)
 localstack_1        | Waiting for all LocalStack services to be ready
 localstack_1        | Starting edge router (https port 4566)...
-localstack_1        | Starting mock DynamoDB service on http port 4566 ...
-localstack_1        | Starting mock DynamoDB Streams service on http port 4566 ...
-localstack_1        | Starting mock ES service on http port 4566 ...
-localstack_1        | Starting mock Kinesis service on http port 4566 ...
+localstack_1        | Starting mock DynamoDB service in http ports 4566 (recommended) and 4569 (deprecated)...
+localstack_1        | Starting mock ES service on http ports 4566 (recommended) and 4578 (deprecated)...
+localstack_1        | 2021-01-26T22:09:49:INFO:botocore.credentials: Found credentials in environment variables.
+localstack_1        | Running on 0.0.0.0:4566 over https (CTRL + C to quit)
+localstack_1        | Running on 0.0.0.0:4569 over http (CTRL + C to quit)
 localstack_1        | Initializing DynamoDB Local with the following configuration:
-localstack_1        | Port:	55193
+localstack_1        | Port:	47699
 localstack_1        | InMemory:	true
 localstack_1        | DbPath:	null
 localstack_1        | SharedDb:	true
 localstack_1        | shouldDelayTransientStatuses:	false
 localstack_1        | CorsParams:	*
 localstack_1        | 
-localstack_1        | Listening at http://:::49739
-localstack_1        | [2021-01-25 17:14:02 +0000] [23] [INFO] Running on https://0.0.0.0:4566 (CTRL + C to quit)
-localstack_1        | 2021-01-25T17:14:02:INFO:hypercorn.error: Running on https://0.0.0.0:4566 (CTRL + C to quit)
+localstack_1        | 2021-01-26T22:09:52:INFO:botocore.credentials: Found credentials in environment variables.
 localstack_1        | Ready.
-localstack_1        | 2021-01-25T17:14:07:INFO:localstack.utils.analytics.profiler: Execution of "start_api_services" took 5123.658895492554ms
-localstack_1        | 2021-01-25T17:14:08:DEBUG:localstack.services.es.es_starter: Starting local Elasticsearch (http port 4571)
-localstack_1        | [2021-01-25 17:14:09 +0000] [23] [INFO] Running on http://0.0.0.0:4571 (CTRL + C to quit)
-localstack_1        | 2021-01-25T17:14:09:INFO:hypercorn.error: Running on http://0.0.0.0:4571 (CTRL + C to quit)
-localstack_1        | OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
-localstack_1        | [2021-01-25T17:14:12,647][INFO ][o.e.e.NodeEnvironment    ] [7c03b3e1b0f0] using [1] data paths, mounts [[/ (overlay)]], net usable_space [49.9gb], net total_space [58.4gb], types [overlay]
-localstack_1        | [2021-01-25T17:14:12,664][INFO ][o.e.e.NodeEnvironment    ] [7c03b3e1b0f0] heap size [580mb], compressed ordinary object pointers [unknown]
-localstack_1        | [2021-01-25T17:14:12,727][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] node name [7c03b3e1b0f0], node ID [a3AEna2DQ5qu66px_3y7Ag], cluster name [elasticsearch]
-localstack_1        | [2021-01-25T17:14:12,730][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] version[7.7.0], pid[150], build[default/tar/81a1e9eda8e6183f5237786246f6dced26a10eaf/2020-05-12T02:01:37.602180Z], OS[Linux/4.19.121-linuxkit/amd64], JVM[Alpine/OpenJDK 64-Bit Server VM/11.0.9/11.0.9+11-alpine-r1]
-localstack_1        | [2021-01-25T17:14:12,730][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] JVM home [/usr/lib/jvm/java-11]
-localstack_1        | [2021-01-25T17:14:12,731][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.locale.providers=SPI,COMPAT, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Djava.io.tmpdir=/opt/code/localstack/localstack/infra/elasticsearch/tmp, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Xms200m, -Xmx600m, -XX:MaxDirectMemorySize=314572800, -Des.path.home=/opt/code/localstack/localstack/infra/elasticsearch, -Des.path.conf=/opt/code/localstack/localstack/infra/elasticsearch/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
-localstack_1        | [2021-01-25T17:14:15,132][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [aggs-matrix-stats]
-localstack_1        | [2021-01-25T17:14:15,132][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [analysis-common]
-localstack_1        | [2021-01-25T17:14:15,133][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [constant-keyword]
-localstack_1        | [2021-01-25T17:14:15,133][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [flattened]
-localstack_1        | [2021-01-25T17:14:15,134][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [frozen-indices]
-localstack_1        | [2021-01-25T17:14:15,134][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [ingest-common]
-localstack_1        | [2021-01-25T17:14:15,135][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [ingest-user-agent]
-localstack_1        | [2021-01-25T17:14:15,135][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [lang-expression]
-localstack_1        | [2021-01-25T17:14:15,135][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [lang-mustache]
-localstack_1        | [2021-01-25T17:14:15,136][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [lang-painless]
-localstack_1        | [2021-01-25T17:14:15,136][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [mapper-extras]
-localstack_1        | [2021-01-25T17:14:15,137][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [parent-join]
-localstack_1        | [2021-01-25T17:14:15,137][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [percolator]
-localstack_1        | [2021-01-25T17:14:15,138][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [rank-eval]
-localstack_1        | [2021-01-25T17:14:15,138][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [reindex]
-localstack_1        | [2021-01-25T17:14:15,138][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [repository-url]
-localstack_1        | [2021-01-25T17:14:15,139][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [search-business-rules]
-localstack_1        | [2021-01-25T17:14:15,139][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [spatial]
-localstack_1        | [2021-01-25T17:14:15,140][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [tasks]
-localstack_1        | [2021-01-25T17:14:15,140][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [transform]
-localstack_1        | [2021-01-25T17:14:15,141][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [transport-netty4]
-localstack_1        | [2021-01-25T17:14:15,141][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [vectors]
-localstack_1        | [2021-01-25T17:14:15,141][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-analytics]
-localstack_1        | [2021-01-25T17:14:15,142][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-async-search]
-localstack_1        | [2021-01-25T17:14:15,142][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-autoscaling]
-localstack_1        | [2021-01-25T17:14:15,143][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-ccr]
-localstack_1        | [2021-01-25T17:14:15,143][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-core]
-localstack_1        | [2021-01-25T17:14:15,143][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-deprecation]
-localstack_1        | [2021-01-25T17:14:15,144][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-enrich]
-localstack_1        | [2021-01-25T17:14:15,144][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-eql]
-localstack_1        | [2021-01-25T17:14:15,145][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-graph]
-localstack_1        | [2021-01-25T17:14:15,145][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-identity-provider]
-localstack_1        | [2021-01-25T17:14:15,146][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-ilm]
-localstack_1        | [2021-01-25T17:14:15,146][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-logstash]
-localstack_1        | [2021-01-25T17:14:15,146][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-ml]
-localstack_1        | [2021-01-25T17:14:15,147][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-monitoring]
-localstack_1        | [2021-01-25T17:14:15,147][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-ql]
-localstack_1        | [2021-01-25T17:14:15,148][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-rollup]
-localstack_1        | [2021-01-25T17:14:15,148][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-security]
-localstack_1        | [2021-01-25T17:14:15,149][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-sql]
-localstack_1        | [2021-01-25T17:14:15,149][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-voting-only-node]
-localstack_1        | [2021-01-25T17:14:15,149][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded module [x-pack-watcher]
-localstack_1        | [2021-01-25T17:14:15,150][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [analysis-icu]
-localstack_1        | [2021-01-25T17:14:15,151][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [analysis-kuromoji]
-localstack_1        | [2021-01-25T17:14:15,151][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [analysis-phonetic]
-localstack_1        | [2021-01-25T17:14:15,151][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [analysis-smartcn]
-localstack_1        | [2021-01-25T17:14:15,152][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [analysis-stempel]
-localstack_1        | [2021-01-25T17:14:15,152][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [analysis-ukrainian]
-localstack_1        | [2021-01-25T17:14:15,152][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [ingest-attachment]
-localstack_1        | [2021-01-25T17:14:15,153][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [mapper-murmur3]
-localstack_1        | [2021-01-25T17:14:15,153][INFO ][o.e.p.PluginsService     ] [7c03b3e1b0f0] loaded plugin [mapper-size]
-localstack_1        | [2021-01-25T17:14:17,474][WARN ][o.e.m.o.OsProbe          ] [7c03b3e1b0f0] getTotalPhysicalMemorySize is not available
-localstack_1        | [2021-01-25T17:14:17,474][WARN ][o.e.m.o.OsProbe          ] [7c03b3e1b0f0] getFreePhysicalMemorySize is not available
-localstack_1        | [2021-01-25T17:14:18,577][ERROR][o.e.x.c.s.SSLService     ] [7c03b3e1b0f0] unsupported ciphers [[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA]] were requested but cannot be used in this JVM, however there are supported ciphers that will be used [[TLS_AES_256_GCM_SHA384, TLS_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA]]. If you are trying to use ciphers with a key length greater than 128 bits on an Oracle JVM, you will need to install the unlimited strength JCE policy files.
-localstack_1        | [2021-01-25T17:14:19,012][INFO ][o.e.x.s.a.s.FileRolesStore] [7c03b3e1b0f0] parsed [0] roles from file [/opt/code/localstack/localstack/infra/elasticsearch/config/roles.yml]
-localstack_1        | [2021-01-25T17:14:20,426][INFO ][o.e.d.DiscoveryModule    ] [7c03b3e1b0f0] using discovery type [zen] and seed hosts providers [settings]
-localstack_1        | [2021-01-25T17:14:21,312][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] initialized
-localstack_1        | [2021-01-25T17:14:21,313][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] starting ...
-localstack_1        | [2021-01-25T17:14:21,512][INFO ][o.e.t.TransportService   ] [7c03b3e1b0f0] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
-localstack_1        | [2021-01-25T17:14:21,732][WARN ][o.e.b.BootstrapChecks    ] [7c03b3e1b0f0] the default discovery settings are unsuitable for production use; at least one of [discovery.seed_hosts, discovery.seed_providers, cluster.initial_master_nodes] must be configured
-localstack_1        | [2021-01-25T17:14:21,745][INFO ][o.e.c.c.ClusterBootstrapService] [7c03b3e1b0f0] no discovery configuration found, will perform best-effort cluster bootstrapping after [3s] unless existing master is discovered
-localstack_1        | [2021-01-25T17:14:24,750][INFO ][o.e.c.c.Coordinator      ] [7c03b3e1b0f0] setting initial configuration to VotingConfiguration{a3AEna2DQ5qu66px_3y7Ag}
-localstack_1        | [2021-01-25T17:14:24,920][INFO ][o.e.c.s.MasterService    ] [7c03b3e1b0f0] elected-as-master ([1] nodes joined)[{7c03b3e1b0f0}{a3AEna2DQ5qu66px_3y7Ag}{EaZJfNlGRQChPFmZEPqECg}{127.0.0.1}{127.0.0.1:9300}{dimrt}{xpack.installed=true, transform.node=true} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 1, version: 1, delta: master node changed {previous [], current [{7c03b3e1b0f0}{a3AEna2DQ5qu66px_3y7Ag}{EaZJfNlGRQChPFmZEPqECg}{127.0.0.1}{127.0.0.1:9300}{dimrt}{xpack.installed=true, transform.node=true}]}
-localstack_1        | [2021-01-25T17:14:24,952][INFO ][o.e.c.c.CoordinationState] [7c03b3e1b0f0] cluster UUID set to [2a_PR7btTginAhvWe0qtcQ]
-localstack_1        | [2021-01-25T17:14:24,973][INFO ][o.e.c.s.ClusterApplierService] [7c03b3e1b0f0] master node changed {previous [], current [{7c03b3e1b0f0}{a3AEna2DQ5qu66px_3y7Ag}{EaZJfNlGRQChPFmZEPqECg}{127.0.0.1}{127.0.0.1:9300}{dimrt}{xpack.installed=true, transform.node=true}]}, term: 1, version: 1, reason: Publication{term=1, version=1}
-localstack_1        | [2021-01-25T17:14:25,010][INFO ][o.e.h.AbstractHttpServerTransport] [7c03b3e1b0f0] publish_address {127.0.0.1:37073}, bound_addresses {127.0.0.1:37073}
-localstack_1        | [2021-01-25T17:14:25,011][INFO ][o.e.n.Node               ] [7c03b3e1b0f0] started
-localstack_1        | [2021-01-25T17:14:25,108][INFO ][o.e.g.GatewayService     ] [7c03b3e1b0f0] recovered [0] indices into cluster_state
-localstack_1        | [2021-01-25T17:14:26,825][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.triggered_watches] for index patterns [.triggered_watches*]
-localstack_1        | [2021-01-25T17:14:26,950][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.watch-history-11] for index patterns [.watcher-history-11*]
-localstack_1        | [2021-01-25T17:14:27,030][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.watches] for index patterns [.watches*]
-localstack_1        | [2021-01-25T17:14:27,111][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [ilm-history] for index patterns [ilm-history-2*]
-localstack_1        | [2021-01-25T17:14:27,282][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.slm-history] for index patterns [.slm-history-2*]
-localstack_1        | [2021-01-25T17:14:27,404][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.monitoring-logstash] for index patterns [.monitoring-logstash-7-*]
-localstack_1        | [2021-01-25T17:14:27,483][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.monitoring-es] for index patterns [.monitoring-es-7-*]
-localstack_1        | [2021-01-25T17:14:27,554][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.monitoring-beats] for index patterns [.monitoring-beats-7-*]
-localstack_1        | [2021-01-25T17:14:27,626][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.monitoring-alerts-7] for index patterns [.monitoring-alerts-7]
-localstack_1        | [2021-01-25T17:14:27,713][INFO ][o.e.c.m.MetaDataIndexTemplateService] [7c03b3e1b0f0] adding template [.monitoring-kibana] for index patterns [.monitoring-kibana-7-*]
-localstack_1        | [2021-01-25T17:14:27,748][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [7c03b3e1b0f0] adding index lifecycle policy [watch-history-ilm-policy]
-localstack_1        | [2021-01-25T17:14:27,785][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [7c03b3e1b0f0] adding index lifecycle policy [ilm-history-ilm-policy]
-localstack_1        | [2021-01-25T17:14:27,822][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [7c03b3e1b0f0] adding index lifecycle policy [slm-history-ilm-policy]
-localstack_1        | [2021-01-25T17:14:27,904][INFO ][o.e.l.LicenseService     ] [7c03b3e1b0f0] license [ea2da1a5-bd0b-4e31-899f-fa7ab834bd5b] mode [basic] - valid
-localstack_1        | [2021-01-25T17:14:27,905][INFO ][o.e.x.s.s.SecurityStatusChangeListener] [7c03b3e1b0f0] Active license is now [BASIC]; Security is disabled
-localstack_1        | 2021-01-25T17:14:48:ERROR:localstack.services.plugins: Error checking state of local environment (after some retries): Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        | 2021-01-26T22:09:55:DEBUG:localstack.services.es.es_starter: Starting local Elasticsearch (http port 4571)
+localstack_1        | Running on 0.0.0.0:4571 over http (CTRL + C to quit)
+localstack_1        | [2021-01-26T22:09:59,457][INFO ][o.e.e.NodeEnvironment    ] [4db5268004ac] using [1] data paths, mounts [[/ (overlay)]], net usable_space [49gb], net total_space [58.4gb], types [overlay]
+localstack_1        | [2021-01-26T22:09:59,473][INFO ][o.e.e.NodeEnvironment    ] [4db5268004ac] heap size [580mb], compressed ordinary object pointers [true]
+localstack_1        | [2021-01-26T22:09:59,476][INFO ][o.e.n.Node               ] [4db5268004ac] node name [4db5268004ac], node ID [AhaXVnpOT8CooybzAwIf6g], cluster name [elasticsearch]
+localstack_1        | [2021-01-26T22:09:59,476][INFO ][o.e.n.Node               ] [4db5268004ac] version[7.1.0], pid[110], build[default/tar/606a173/2019-05-16T00:43:15.323135Z], OS[Linux/4.19.121-linuxkit/amd64], JVM[IcedTea/OpenJDK 64-Bit Server VM/1.8.0_252/25.252-b09]
+localstack_1        | [2021-01-26T22:09:59,476][INFO ][o.e.n.Node               ] [4db5268004ac] JVM home [/usr/lib/jvm/java-1.8-openjdk/jre]
+localstack_1        | [2021-01-26T22:09:59,477][INFO ][o.e.n.Node               ] [4db5268004ac] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/opt/code/localstack/localstack/infra/elasticsearch/tmp, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Xms200m, -Xmx600m, -Des.path.home=/opt/code/localstack/localstack/infra/elasticsearch, -Des.path.conf=/opt/code/localstack/localstack/infra/elasticsearch/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+localstack_1        | [2021-01-26T22:10:02,018][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [aggs-matrix-stats]
+localstack_1        | [2021-01-26T22:10:02,019][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [analysis-common]
+localstack_1        | [2021-01-26T22:10:02,019][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [ingest-common]
+localstack_1        | [2021-01-26T22:10:02,019][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [ingest-user-agent]
+localstack_1        | [2021-01-26T22:10:02,020][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [lang-expression]
+localstack_1        | [2021-01-26T22:10:02,020][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [lang-mustache]
+localstack_1        | [2021-01-26T22:10:02,021][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [lang-painless]
+localstack_1        | [2021-01-26T22:10:02,022][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [mapper-extras]
+localstack_1        | [2021-01-26T22:10:02,022][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [parent-join]
+localstack_1        | [2021-01-26T22:10:02,022][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [percolator]
+localstack_1        | [2021-01-26T22:10:02,023][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [rank-eval]
+localstack_1        | [2021-01-26T22:10:02,023][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [reindex]
+localstack_1        | [2021-01-26T22:10:02,025][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [repository-url]
+localstack_1        | [2021-01-26T22:10:02,025][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [transport-netty4]
+localstack_1        | [2021-01-26T22:10:02,025][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-ccr]
+localstack_1        | [2021-01-26T22:10:02,027][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-core]
+localstack_1        | [2021-01-26T22:10:02,027][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-deprecation]
+localstack_1        | [2021-01-26T22:10:02,028][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-graph]
+localstack_1        | [2021-01-26T22:10:02,028][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-ilm]
+localstack_1        | [2021-01-26T22:10:02,028][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-logstash]
+localstack_1        | [2021-01-26T22:10:02,028][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-ml]
+localstack_1        | [2021-01-26T22:10:02,028][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-monitoring]
+localstack_1        | [2021-01-26T22:10:02,029][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-rollup]
+localstack_1        | [2021-01-26T22:10:02,029][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-security]
+localstack_1        | [2021-01-26T22:10:02,029][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-sql]
+localstack_1        | [2021-01-26T22:10:02,029][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded module [x-pack-watcher]
+localstack_1        | [2021-01-26T22:10:02,030][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [analysis-icu]
+localstack_1        | [2021-01-26T22:10:02,030][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [analysis-kuromoji]
+localstack_1        | [2021-01-26T22:10:02,030][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [analysis-phonetic]
+localstack_1        | [2021-01-26T22:10:02,030][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [analysis-smartcn]
+localstack_1        | [2021-01-26T22:10:02,031][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [analysis-stempel]
+localstack_1        | [2021-01-26T22:10:02,031][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [analysis-ukrainian]
+localstack_1        | [2021-01-26T22:10:02,031][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [ingest-attachment]
+localstack_1        | [2021-01-26T22:10:02,031][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [mapper-murmur3]
+localstack_1        | [2021-01-26T22:10:02,031][INFO ][o.e.p.PluginsService     ] [4db5268004ac] loaded plugin [mapper-size]
+localstack_1        | 2021-01-26T22:10:04:WARNING:localstack.utils.server.http2_server: Error in proxy handler for request GET http://4db5268004ac:4571/_cat/aliases: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8210a8b280>: Failed to establish a new connection: [Errno 111] Connection refused')) Traceback (most recent call last):
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+localstack_1        |     conn = connection.create_connection(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+localstack_1        |     raise err
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+localstack_1        |     sock.connect(sa)
+localstack_1        | ConnectionRefusedError: [Errno 111] Connection refused
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+localstack_1        |     httplib_response = self._make_request(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+localstack_1        |     conn.request(method, url, **httplib_request_kw)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1230, in request
+localstack_1        |     self._send_request(method, url, body, headers, encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
+localstack_1        |     self.endheaders(body, encode_chunked=encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
+localstack_1        |     self._send_output(message_body, encode_chunked=encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
+localstack_1        |     self.send(msg)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 944, in send
+localstack_1        |     self.connect()
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+localstack_1        |     conn = self._new_conn()
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+localstack_1        |     raise NewConnectionError(
+localstack_1        | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8210a8b280>: Failed to establish a new connection: [Errno 111] Connection refused
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+localstack_1        |     resp = conn.urlopen(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+localstack_1        |     retries = retries.increment(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+localstack_1        |     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+localstack_1        | urllib3.exceptions.MaxRetryError: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8210a8b280>: Failed to establish a new connection: [Errno 111] Connection refused'))
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/localstack/utils/server/http2_server.py", line 86, in index
+localstack_1        |     result = await run_sync(handler, request, data)
+localstack_1        |   File "/opt/code/localstack/localstack/utils/async_utils.py", line 54, in run_sync
+localstack_1        |     return await loop.run_in_executor(thread_pool, copy_context().run, func, *args)
+localstack_1        |   File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+localstack_1        |     result = self.fn(*self.args, **self.kwargs)
+localstack_1        |   File "/opt/code/localstack/localstack/services/generic_proxy.py", line 555, in handler
+localstack_1        |     response = modify_and_forward(method=method, path=path_with_params, data_bytes=data, headers=headers,
+localstack_1        |   File "/opt/code/localstack/localstack/services/generic_proxy.py", line 372, in modify_and_forward
+localstack_1        |     response = requests_method(request_url, data=data_to_send,
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+localstack_1        |     return request('get', url, params=params, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+localstack_1        |     return session.request(method=method, url=url, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+localstack_1        |     resp = self.send(prep, **send_kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+localstack_1        |     r = adapter.send(request, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+localstack_1        |     raise ConnectionError(e, request=request)
+localstack_1        | requests.exceptions.ConnectionError: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8210a8b280>: Failed to establish a new connection: [Errno 111] Connection refused'))
+localstack_1        | 
+localstack_1        | [2021-01-26T22:10:06,765][INFO ][o.e.x.s.a.s.FileRolesStore] [4db5268004ac] parsed [0] roles from file [/opt/code/localstack/localstack/infra/elasticsearch/config/roles.yml]
+localstack_1        | 2021-01-26T22:10:07:WARNING:localstack.utils.server.http2_server: Error in proxy handler for request GET http://4db5268004ac:4571/_cat/aliases: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f820fe262b0>: Failed to establish a new connection: [Errno 111] Connection refused')) Traceback (most recent call last):
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+localstack_1        |     conn = connection.create_connection(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+localstack_1        |     raise err
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+localstack_1        |     sock.connect(sa)
+localstack_1        | ConnectionRefusedError: [Errno 111] Connection refused
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+localstack_1        |     httplib_response = self._make_request(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+localstack_1        |     conn.request(method, url, **httplib_request_kw)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1230, in request
+localstack_1        |     self._send_request(method, url, body, headers, encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
+localstack_1        |     self.endheaders(body, encode_chunked=encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
+localstack_1        |     self._send_output(message_body, encode_chunked=encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
+localstack_1        |     self.send(msg)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 944, in send
+localstack_1        |     self.connect()
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+localstack_1        |     conn = self._new_conn()
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+localstack_1        |     raise NewConnectionError(
+localstack_1        | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f820fe262b0>: Failed to establish a new connection: [Errno 111] Connection refused
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+localstack_1        |     resp = conn.urlopen(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+localstack_1        |     retries = retries.increment(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+localstack_1        |     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+localstack_1        | urllib3.exceptions.MaxRetryError: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f820fe262b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
+localstack_1        |   File "/opt/code/localstack/localstack/utils/server/http2_server.py", line 86, in index
+localstack_1        |     result = await run_sync(handler, request, data)
+localstack_1        |   File "/opt/code/localstack/localstack/utils/async_utils.py", line 54, in run_sync
+localstack_1        |     return await loop.run_in_executor(thread_pool, copy_context().run, func, *args)
+localstack_1        |   File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+localstack_1        |     result = self.fn(*self.args, **self.kwargs)
+localstack_1        |   File "/opt/code/localstack/localstack/services/generic_proxy.py", line 555, in handler
+localstack_1        |     response = modify_and_forward(method=method, path=path_with_params, data_bytes=data, headers=headers,
+localstack_1        |   File "/opt/code/localstack/localstack/services/generic_proxy.py", line 372, in modify_and_forward
+localstack_1        |     response = requests_method(request_url, data=data_to_send,
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+localstack_1        |     return request('get', url, params=params, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+localstack_1        |     return session.request(method=method, url=url, **kwargs)
+setup-localstack_1  | still booting dynamodb
+setup-localstack_1  | 
 setup-localstack_1  | still booting dynamodb
 setup-localstack_1  | 
 setup-localstack_1  | still booting dynamodb
@@ -271,7 +283,7 @@ setup-localstack_1  |                 "AttributeName": "id"
 setup-localstack_1  |             }
 setup-localstack_1  |         ], 
 setup-localstack_1  |         "ItemCount": 0, 
-setup-localstack_1  |         "CreationDateTime": 1611594847.811
+setup-localstack_1  |         "CreationDateTime": 1611698995.156
 setup-localstack_1  |     }
 setup-localstack_1  | }
 setup-localstack_1  | waiting for dd table
@@ -280,19 +292,6 @@ setup-localstack_1  | {
 setup-localstack_1  |     "DomainStatus": {
 setup-localstack_1  |         "ElasticsearchClusterConfig": {
 setup-localstack_1  |             "DedicatedMasterEnabled": true, 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
 setup-localstack_1  |             "InstanceCount": 1, 
 setup-localstack_1  |             "ZoneAwarenessEnabled": false, 
 setup-localstack_1  |             "DedicatedMasterType": "m3.medium.elasticsearch", 
@@ -348,625 +347,106 @@ setup-localstack_1  | false
 setup-localstack_1  | still creating es
 setup-localstack_1  | 0
 setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+setup-localstack_1  | true
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+localstack_1        |     resp = self.send(prep, **send_kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+localstack_1        |     r = adapter.send(request, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+localstack_1        |     raise ConnectionError(e, request=request)
+localstack_1        | requests.exceptions.ConnectionError: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f820fe262b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+localstack_1        | 
+localstack_1        | [2021-01-26T22:10:08,204][DEBUG][o.e.a.ActionModule       ] [4db5268004ac] Using REST wrapper from plugin org.elasticsearch.xpack.security.Security
+localstack_1        | [2021-01-26T22:10:08,594][INFO ][o.e.d.DiscoveryModule    ] [4db5268004ac] using discovery type [zen] and seed hosts providers [settings]
+localstack_1        | [2021-01-26T22:10:09,616][INFO ][o.e.n.Node               ] [4db5268004ac] initialized
+localstack_1        | [2021-01-26T22:10:09,617][INFO ][o.e.n.Node               ] [4db5268004ac] starting ...
+localstack_1        | [2021-01-26T22:10:09,841][INFO ][o.e.t.TransportService   ] [4db5268004ac] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+localstack_1        | [2021-01-26T22:10:09,863][WARN ][o.e.b.BootstrapChecks    ] [4db5268004ac] initial heap size [209715200] not equal to maximum heap size [629145600]; this can cause resize pauses and prevents mlockall from locking the entire heap
+localstack_1        | [2021-01-26T22:10:09,863][WARN ][o.e.b.BootstrapChecks    ] [4db5268004ac] the default discovery settings are unsuitable for production use; at least one of [discovery.seed_hosts, discovery.seed_providers, cluster.initial_master_nodes] must be configured
+localstack_1        | [2021-01-26T22:10:09,889][INFO ][o.e.c.c.ClusterBootstrapService] [4db5268004ac] no discovery configuration found, will perform best-effort cluster bootstrapping after [3s] unless existing master is discovered
+localstack_1        | 2021-01-26T22:10:10:WARNING:localstack.utils.server.http2_server: Error in proxy handler for request GET http://4db5268004ac:4571/_cat/aliases: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f820fe01880>: Failed to establish a new connection: [Errno 111] Connection refused')) Traceback (most recent call last):
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+localstack_1        |     conn = connection.create_connection(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+localstack_1        |     raise err
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+localstack_1        |     sock.connect(sa)
+localstack_1        | ConnectionRefusedError: [Errno 111] Connection refused
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | 2021-01-25T17:14:48:WARNING:bootstrap.py: Thread run method <function create_domain.<locals>.do_start at 0x7fcacf663430>(None) failed:  Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+localstack_1        |     httplib_response = self._make_request(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+localstack_1        |     conn.request(method, url, **httplib_request_kw)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1230, in request
+localstack_1        |     self._send_request(method, url, body, headers, encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1276, in _send_request
+localstack_1        |     self.endheaders(body, encode_chunked=encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1225, in endheaders
+localstack_1        |     self._send_output(message_body, encode_chunked=encode_chunked)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 1004, in _send_output
+localstack_1        |     self.send(msg)
+localstack_1        |   File "/usr/lib/python3.8/http/client.py", line 944, in send
+localstack_1        |     self.connect()
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+localstack_1        |     conn = self._new_conn()
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+localstack_1        |     raise NewConnectionError(
+localstack_1        | urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f820fe01880>: Failed to establish a new connection: [Errno 111] Connection refused
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+localstack_1        |     resp = conn.urlopen(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+localstack_1        |     retries = retries.increment(
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+localstack_1        |     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+localstack_1        | urllib3.exceptions.MaxRetryError: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f820fe01880>: Failed to establish a new connection: [Errno 111] Connection refused'))
 localstack_1        | 
 localstack_1        | During handling of the above exception, another exception occurred:
 localstack_1        | 
 localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
+localstack_1        |   File "/opt/code/localstack/localstack/utils/server/http2_server.py", line 86, in index
+localstack_1        |     result = await run_sync(handler, request, data)
+localstack_1        |   File "/opt/code/localstack/localstack/utils/async_utils.py", line 54, in run_sync
+localstack_1        |     return await loop.run_in_executor(thread_pool, copy_context().run, func, *args)
+localstack_1        |   File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+localstack_1        |     result = self.fn(*self.args, **self.kwargs)
+localstack_1        |   File "/opt/code/localstack/localstack/services/generic_proxy.py", line 555, in handler
+localstack_1        |     response = modify_and_forward(method=method, path=path_with_params, data_bytes=data, headers=headers,
+localstack_1        |   File "/opt/code/localstack/localstack/services/generic_proxy.py", line 372, in modify_and_forward
+localstack_1        |     response = requests_method(request_url, data=data_to_send,
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+localstack_1        |     return request('get', url, params=params, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+localstack_1        |     return session.request(method=method, url=url, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+localstack_1        |     resp = self.send(prep, **send_kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+localstack_1        |     r = adapter.send(request, **kwargs)
+localstack_1        |   File "/opt/code/localstack/.venv/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+localstack_1        |     raise ConnectionError(e, request=request)
+localstack_1        | requests.exceptions.ConnectionError: MyHTTPConnectionPool(host='127.0.0.1', port=40731): Max retries exceeded with url: /_cat/aliases (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f820fe01880>: Failed to establish a new connection: [Errno 111] Connection refused'))
 localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-localstack_1        | During handling of the above exception, another exception occurred:
-localstack_1        | 
-localstack_1        | Traceback (most recent call last):
-localstack_1        |   File "/opt/code/localstack/localstack/utils/bootstrap.py", line 581, in run
-localstack_1        |     result = self.func(self.params)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_api.py", line 229, in do_start
-localstack_1        |     start_elasticsearch_instance(version=version)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_api.py", line 199, in start_elasticsearch_instance
-localstack_1        |     check_infra(apis=[], additional_checks=[es_starter.check_elasticsearch])
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 105, in check_infra
-localstack_1        |     check_infra(retries - 1, expect_shutdown=expect_shutdown, apis=apis, additional_checks=additional_checks)
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 105, in check_infra
-localstack_1        |     check_infra(retries - 1, expect_shutdown=expect_shutdown, apis=apis, additional_checks=additional_checks)
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 105, in check_infra
-localstack_1        |     check_infra(retries - 1, expect_shutdown=expect_shutdown, apis=apis, additional_checks=additional_checks)
-localstack_1        |   [Previous line repeated 7 more times]
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 103, in check_infra
-localstack_1        |     raise e
-localstack_1        |   File "/opt/code/localstack/localstack/services/plugins.py", line 99, in check_infra
-localstack_1        |     additional(expect_shutdown=expect_shutdown)
-localstack_1        |   File "/opt/code/localstack/localstack/services/es/es_starter.py", line 97, in check_elasticsearch
-localstack_1        |     assert isinstance(out, six.string_types)
-localstack_1        | AssertionError
-localstack_1        | 
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
-setup-localstack_1  | still creating es
-setup-localstack_1  | 0
-setup-localstack_1  | false
+localstack_1        | [2021-01-26T22:10:12,896][INFO ][o.e.c.c.Coordinator      ] [4db5268004ac] setting initial configuration to VotingConfiguration{AhaXVnpOT8CooybzAwIf6g}
+localstack_1        | [2021-01-26T22:10:13,081][INFO ][o.e.c.s.MasterService    ] [4db5268004ac] elected-as-master ([1] nodes joined)[{4db5268004ac}{AhaXVnpOT8CooybzAwIf6g}{XJLKU6qFQvKQ0ksOZt0oAw}{127.0.0.1}{127.0.0.1:9300}{xpack.installed=true} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 1, version: 1, reason: master node changed {previous [], current [{4db5268004ac}{AhaXVnpOT8CooybzAwIf6g}{XJLKU6qFQvKQ0ksOZt0oAw}{127.0.0.1}{127.0.0.1:9300}{xpack.installed=true}]}
+localstack_1        | [2021-01-26T22:10:13,112][INFO ][o.e.c.c.CoordinationState] [4db5268004ac] cluster UUID set to [aFXuRpy_Rry1BeyKzw0RIg]
+localstack_1        | [2021-01-26T22:10:13,132][INFO ][o.e.c.s.ClusterApplierService] [4db5268004ac] master node changed {previous [], current [{4db5268004ac}{AhaXVnpOT8CooybzAwIf6g}{XJLKU6qFQvKQ0ksOZt0oAw}{127.0.0.1}{127.0.0.1:9300}{xpack.installed=true}]}, term: 1, version: 1, reason: Publication{term=1, version=1}
+localstack_1        | [2021-01-26T22:10:13,188][INFO ][o.e.h.AbstractHttpServerTransport] [4db5268004ac] publish_address {127.0.0.1:40731}, bound_addresses {127.0.0.1:40731}
+localstack_1        | [2021-01-26T22:10:13,188][INFO ][o.e.n.Node               ] [4db5268004ac] started
+localstack_1        | [2021-01-26T22:10:13,189][WARN ][o.e.x.s.a.s.m.NativeRoleMappingStore] [4db5268004ac] Failed to clear cache for realms [[]]
+localstack_1        | [2021-01-26T22:10:13,255][INFO ][o.e.g.GatewayService     ] [4db5268004ac] recovered [0] indices into cluster_state
+localstack_1        | [2021-01-26T22:10:14,146][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.watch-history-9] for index patterns [.watcher-history-9*]
+localstack_1        | [2021-01-26T22:10:14,174][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.watches] for index patterns [.watches*]
+localstack_1        | [2021-01-26T22:10:14,191][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.triggered_watches] for index patterns [.triggered_watches*]
+localstack_1        | [2021-01-26T22:10:14,214][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.monitoring-logstash] for index patterns [.monitoring-logstash-7-*]
+localstack_1        | [2021-01-26T22:10:14,245][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.monitoring-es] for index patterns [.monitoring-es-7-*]
+localstack_1        | [2021-01-26T22:10:14,268][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.monitoring-beats] for index patterns [.monitoring-beats-7-*]
+localstack_1        | [2021-01-26T22:10:14,287][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.monitoring-alerts-7] for index patterns [.monitoring-alerts-7]
+localstack_1        | [2021-01-26T22:10:14,306][INFO ][o.e.c.m.MetaDataIndexTemplateService] [4db5268004ac] adding template [.monitoring-kibana] for index patterns [.monitoring-kibana-7-*]
+localstack_1        | [2021-01-26T22:10:14,398][INFO ][o.e.l.LicenseService     ] [4db5268004ac] license [ae2c1eee-830f-4dc8-920b-2852be393361] mode [basic] - valid
+localstack_1        | [2021-01-26T22:10:14,409][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [4db5268004ac] adding index lifecycle policy [watch-history-ilm-policy]
